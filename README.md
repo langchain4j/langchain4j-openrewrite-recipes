@@ -22,7 +22,7 @@ available in the OpenRewrite docs that provides more details than the below READ
 ## Reference recipes
 
 * [META-INF/rewrite/stringutils.yml](./src/main/resources/META-INF/rewrite/stringutils.yml) - A declarative YAML recipe that replaces usages of `org.springframework.util.StringUtils` with `org.apache.commons.lang3.StringUtils`.
-  * [UseApacheStringUtilsTest](./src/test/java/com/yourorg/UseApacheStringUtilsTest.java) - A test class for the `com.yourorg.UseApacheStringUtils` recipe.
+  * [UseApacheStringUtilsTest](./src/test/java/com/yourorg/UseApacheStringUtilsTest.java) - A test class for the `dev.langchain4j.UseApacheStringUtils` recipe.
 * [NoGuavaListsNewArrayList.java](./src/main/java/com/yourorg/NoGuavaListsNewArrayList.java) - An imperative Java recipe that replaces usages of `com.google.common.collect.Lists` with `new ArrayList<>()`.
   * [NoGuavaListsNewArrayListTest.java](./src/test/java/com/yourorg/NoGuavaListsNewArrayListTest.java) - A test class for the `NoGuavaListsNewArrayList` recipe.
 * [SimplifyTernary](./src/main/java/com/yourorg/SimplifyTernary.java) - An Refaster style recipe that simplifies ternary expressions.
@@ -69,12 +69,12 @@ In the pom.xml of a different project you wish to test your recipe out in, make 
                 <version>RELEASE</version>
                 <configuration>
                     <activeRecipes>
-                        <recipe>com.yourorg.NoGuavaListsNewArrayList</recipe>
+                        <recipe>dev.langchain4j.NoGuavaListsNewArrayList</recipe>
                     </activeRecipes>
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>com.yourorg</groupId>
+                        <groupId>dev.langchain4j</groupId>
                         <artifactId>rewrite-recipe-starter</artifactId>
                         <version>0.1.0-SNAPSHOT</version>
                     </dependency>
@@ -100,11 +100,11 @@ repositories {
 }
 
 dependencies {
-    rewrite("com.yourorg:rewrite-recipe-starter:latest.integration")
+    rewrite("dev.langchain4j:rewrite-recipe-starter:latest.integration")
 }
 
 rewrite {
-    activeRecipe("com.yourorg.NoGuavaListsNewArrayList")
+    activeRecipe("dev.langchain4j.NoGuavaListsNewArrayList")
 }
 ```
 

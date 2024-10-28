@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yourorg;
+package dev.langchain4j;
 
-import com.yourorg.table.ClassHierarchyReport;
+import dev.langchain4j.table.ClassHierarchyReport;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 import org.openrewrite.ExecutionContext;

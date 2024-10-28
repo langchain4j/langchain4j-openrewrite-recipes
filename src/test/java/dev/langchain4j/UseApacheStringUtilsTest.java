@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yourorg;
+package dev.langchain4j;
 
 import org.junit.jupiter.api.Test;
 import org.openrewrite.DocumentExample;
@@ -26,7 +26,7 @@ import static org.openrewrite.java.Assertions.java;
 class UseApacheStringUtilsTest implements RewriteTest {
     @Override
     public void defaults(RecipeSpec spec) {
-        spec.recipeFromResources("com.yourorg.UseApacheStringUtils")
+        spec.recipeFromResources("dev.langchain4j.UseApacheStringUtils")
           // Notice how we only pass in `spring-core` as the classpath, but not `commons-lang3`.
           // That's because we only need dependencies to compile the before code blocks, not the after code blocks.
           .parser(JavaParser.fromJavaVersion().classpath("spring-core"));

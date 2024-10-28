@@ -17,7 +17,7 @@ plugins {
 }
 
 // Set as appropriate for your organization
-group = "com.yourorg"
+group = "dev.langchain4j"
 description = "Rewrite recipes."
 
 dependencies {

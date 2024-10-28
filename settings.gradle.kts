@@ -1,1 +1,1 @@
-rootProject.name = "rewrite-recipe-starter"
+rootProject.name = "langchain4j-openrewrite-recipes"
